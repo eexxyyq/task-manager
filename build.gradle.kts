@@ -26,8 +26,9 @@ repositories {
 extra["springCloudVersion"] = "2021.0.0"
 
 dependencies {
-    implementation("io.springfox:springfox-boot-starter:3.0.0")
+    implementation("org.springframework.kafka:spring-kafka")
     kapt("org.mapstruct:mapstruct-processor:1.4.2.Final")
+    implementation("io.springfox:springfox-boot-starter:3.0.0")
     implementation("org.mapstruct:mapstruct:1.4.2.Final")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
@@ -41,6 +42,7 @@ dependencies {
     runtimeOnly("org.postgresql:postgresql")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.springframework.kafka:spring-kafka-test")
 }
 
 dependencyManagement {
