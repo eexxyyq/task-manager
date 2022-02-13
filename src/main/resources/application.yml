@@ -8,7 +8,7 @@ spring:
   datasource:
     url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:task-manager}
     username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:postgres}
+    password: ${DB_PASSWORD:example}
     driver-class-name: org.postgresql.Driver
   jpa:
     generate-ddl: true
@@ -18,4 +18,6 @@ spring:
       matching-strategy: ant_path_matcher
   kafka:
     bootstrap-servers: localhost:29092
+    consumer:
+      auto-offset-reset: earliest
 
